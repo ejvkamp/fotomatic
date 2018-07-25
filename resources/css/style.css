@@ -259,8 +259,13 @@ header .mobile {
   margin: 0 auto;
 }
 
+.image-container img {
+  display: block;
+  max-width: 100%;
+}
+
 .feature .content {
-  padding-top: 2.5rem;
+  padding-top: 2.5rem 0;
 }
 
 .feature h2 {
@@ -297,27 +302,12 @@ header .mobile {
 /* Features Section Tablets */
 
 @media only screen and (max-width: 760px) {
-  #features-section {
-    flex-flow: row;
-    padding: 4rem 5%;
-  }
-
-  .feature {
-    flex: 1;
-    margin: 0 1.25rem;
-    padding: 0;
-  }
-
-  .feature .content {
-    padding-top: 1.5rem;
-  }
 
   .feature h2 {
-    font-size: 2rem;
-    line-height: 1.3;
+    font-size: 1.75rem;
+    padding-top: .5rem;
   }
-
-
+  
 }
 
 /* TODO: Features Section Mobile */
