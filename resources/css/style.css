@@ -8,6 +8,10 @@ html {
 .main-content {
   position: relative;
   top: 5.3125rem; /* To offset for fixed header. */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 .center {
@@ -89,12 +93,16 @@ header .mobile {
   header .mobile {
     display: none;
   }
-
 }
 
 /* Header for Mobile */
 
 @media only screen and (max-width: 450px) {
+
+  header {
+    height: 3rem;
+  }
+
   header .desktop {
     display: none;
   }
@@ -105,13 +113,12 @@ header .mobile {
   }
 
   header .content {
-    padding: .5rem 0;
+    padding: .75rem 0;
   }
 
   header .mobile ul {
     display: flex;
     justify-content: space-around;
-    align-items: center;
     width: 100%;
   }
 
@@ -134,7 +141,6 @@ header .mobile {
   justify-content: flex-start;
   align-items: flex-start;
   height: 43.5rem;
-
 }
 
 .banner {
@@ -224,8 +230,17 @@ header .mobile {
 /* Sign Up Section Mobile */
 
 @media only screen and (max-width: 450px) {
+
   #sign-up-section {
     height: 20rem;
+  }
+
+  .banner {
+    background-position: right;
+  }
+
+  #sign-up-cta .striking {
+    font-size: 2rem;
   }
 
   #sign-up-cta h1 {
@@ -282,23 +297,6 @@ header .mobile {
   color: #4a4a4a;
 }
 
-/*
-
-@media only screen and (max-width: 890px) {
-  .feature h2 {
-    font-size: 1.125rem;
-    line-height: 1.3;
-    font-weight: normal;
-  }
-
-  .feature h3 {
-    font-size: .875rem;
-    line-height: 1.4;
-  }
-}
-
-*/
-
 /* Features Section Tablets */
 
 @media only screen and (max-width: 760px) {
@@ -307,14 +305,32 @@ header .mobile {
     font-size: 1.75rem;
     padding-top: .5rem;
   }
-  
 }
 
-/* TODO: Features Section Mobile */
+/* Features Section Mobile */
 
 @media only screen and (max-width: 480px) {
+  #features-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+  }
 
+  .feature .content {
+    padding: 0 2rem;
+  }
 
+  .feature {
+    flex: 1;
+    padding: 1rem;
+    margin: 0;
+  }
+
+  .feature h2 {
+    padding: 1rem 0;
+    font-size: 1.25rem;
+  }
 }
 
 /* Filters Section */
@@ -366,13 +382,28 @@ header .mobile {
   #filters-section .images-container {
     padding: 0;
   }
-
 }
 
-/* TODO: Filters Section for Mobile */
+/* Filters Section for Mobile */
 
 @media only screen and (max-width: 480px) {
+  #filters-section {
+    padding: 0;
+  }
 
+  #filters-section .content {
+    margin: 1.5rem 0;
+  }
+
+  #filters-section .content h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+
+  #filters-section .content h3 {
+    font-size: .75rem;
+    padding: .75rem 3rem 0 3rem;
+  }
 }
 
 /* Quotes Section */
@@ -422,10 +453,21 @@ header .mobile {
   }
 }
 
-/* TODO: Quotes Section for Moble */
+/* Quotes Section for Moble */
 
 @media only screen and (max-width: 480px) {
+  #quotes-section .content, .quote-citation {
+    padding: 1.875rem .625rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
 
+  #quotes-section .quote-citation {
+    margin: 0;
+    padding: 0.75rem 0;
+  }
 }
 
 /* Footer */
@@ -433,12 +475,14 @@ header .mobile {
 footer {
   background-color: #9b9b9b;
   padding: 1.5rem 2rem;
+  width: 100%;
 }
 
 footer .content {
   color: white;
   display: flex;
   font-size: .75rem;
+  padding: 0 1rem;
 }
 
 footer .copyright {
@@ -454,7 +498,7 @@ footer .copyright {
   }
 }
 
-/* TODO: Footer for Mobile */
+/* Footer for Mobile */
 
 @media only screen and (max-width: 480px) {
   footer .content {
