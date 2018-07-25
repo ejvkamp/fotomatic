@@ -6,7 +6,7 @@ html {
 }
 
 .main-content {
-  position: sticky;
+  position: relative;
   top: 5.3125rem; /* To offset for fixed header. */
 }
 
@@ -274,10 +274,6 @@ header .mobile {
 .image-container img {
   display: block;
   max-width: 100%;
-}
-
-.feature .content {
-  padding-top: 2.5rem 0;
 }
 
 .feature h2 {
